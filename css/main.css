@@ -1,0 +1,124 @@
+:root {
+
+	/* BLUE */
+	--colour-light: #ffffff;
+	--colour-light-text: #000000;
+	--colour-light-dark: #e4ebf5;
+	--colour-dark: #0d47a1;
+	--colour-dark-text: #ffffff;
+
+	--unit: 20px;
+	--header-height: 80px;
+
+	--sans-serif-stack: 'Open Sans', sans-serif;
+}
+
+html {
+	background-color: var(--colour-light);
+	background-color: #fff;
+	font-family: var(--sans-serif-stack);
+}
+
+body {
+	margin: 0;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 1fr 200px;
+	min-height: 100vh;
+	box-sizing: border-box;
+	max-width: 100%;
+}
+
+header.home {
+	box-sizing: border-box;
+
+	width: 800px;
+	max-width: 100%;
+	margin: 0 auto;
+
+	padding: calc(2* var(--unit));
+
+	background-color: var(--colour-dark);
+	color: var(--colour-dark-text);
+}
+
+section {
+	width: 800px;
+	max-width: 100%;
+	box-sizing: border-box;
+	padding: var(--unit);
+	margin: 0 auto;
+}
+
+header .logo {
+	height: var(--header-height);
+	width: var(--header-height);
+	display: block;
+	margin: 0 auto 1.5rem auto;
+}
+
+header .title {
+	display: block;
+	margin: 0 auto;
+	font-weight: 600;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+header .logo img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+h1, h2, h3 {
+	color: var(--colour-dark);
+}
+
+h1 {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+a.big-link {
+	display: block;
+	background-color: var(--colour-light-dark);
+	border: 1px solid var(--colour-dark);
+	border-left-width: 3px;
+	cursor: pointer;
+	padding: calc(0.5 * var(--unit));
+	margin-bottom: var(--unit);
+	transition: .05s;
+	box-sizing: border-box;
+	background-width: 100%;
+}
+
+a.big-link:hover {
+	border-left-width: 6px;
+}
+
+a.big-link .heading {
+	display: flex;
+	justify-content: space-between;
+}
+
+a.big-link .name, a.big-link .icon {
+	display: block;
+	font-weight: 600;
+	color: var(--colour-dark);
+}
+
+a.big-link:hover .name {
+	/*text-decoration: underline;*/
+}
+
+main {
+	padding: var(--unit) 0;
+	box-sizing: border-box;
+}
+
+footer {
+	background-color: var(--colour-dark);
+	color: var(--colour-dark-text);
+	max-width: 100%;
+	box-sizing: border-box;
+}
